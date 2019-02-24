@@ -29,3 +29,6 @@ hs_err_pid*
 /testng-config/target
 /testng-config/.settings
 /testng-config/.idea
+/testng-demo/target
+/testng-demo/.idea
+/testng-demo/*.iml
