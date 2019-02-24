@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="di-suite" object-factory="de.tomesoft.fuh.s01919.support.CustomObjectFactory">
+    <parameter name="x" value="22" />
+    <test name="first">
+        <classes>
+            <class name="de.tomesoft.fuh.s01919.DITest1" />
+            <class name="de.tomesoft.fuh.s01919.DITest2" />
+            <class name="de.tomesoft.fuh.s01919.DITest3" />
+            <!-- Testklassen mit komplexen parameter behaftetem Konstruktor werden ignoriert -->
+            <!-- <class name="de.tomesoft.fuh.s01919.DITest5" /> -->
+            <class name="de.tomesoft.fuh.s01919.DITest5Factory" />
+        </classes>
+    </test>
+</suite>

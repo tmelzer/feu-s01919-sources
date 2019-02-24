@@ -21,3 +21,11 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/testng-config/test-output
+/testng-config/*.cmd
+/testng-config/*.iml
+/testng-config/.classpath
+/testng-config/.project
+/testng-config/target
+/testng-config/.settings
+/testng-config/.idea

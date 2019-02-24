@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="demo-suite-fourth">
+    <test name="wildcard">
+        <method-selectors>
+            <method-selector>
+                <script language="beanshell"><![CDATA[
+                    env = System.getenv();
+                    if (env.containsKey("OS")) {
+                        // windows
+                        return true;
+                    } else {
+                        // linux
+                        return false;
+                    }
+            ]]></script>
+            </method-selector>
+        </method-selectors>
+        <classes>
+            <class name="de.tomesoft.fuh.s01919.DemoTest"/>
+        </classes>
+    </test>
+</suite>
