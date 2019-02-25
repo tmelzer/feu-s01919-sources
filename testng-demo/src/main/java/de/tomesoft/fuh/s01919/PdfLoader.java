@@ -13,12 +13,12 @@ public class PdfLoader {
 
    private WebDriver webBrowser;
    private String driverPath;
-   private String servletUrl;
+   private String serverUrl;
 
    public PdfLoader(String path) {
       driverPath = path;
             
-      servletUrl = "<url>";
+      serverUrl = "http://localhost:8080/s01919";
       webBrowser = null;
    }
 
@@ -36,7 +36,7 @@ public class PdfLoader {
    
    public String readProfileId(String profileName) {
       String profileId = null;
-      webBrowser.get("<profile-url>");
+      webBrowser.get(serverUrl);
 
       // find profile id
       WebElement select = webBrowser.findElement(By.name("profiles"));
@@ -56,8 +56,8 @@ public class PdfLoader {
             + profileId
             + "&mode=init";
       
-      String scriptTestLoader = String.format(getPageLoaderScript(), servletUrl, parTest, parTest.length());
-      String scriptPdfLoader = String.format(getPageLoaderScript(), servletUrl, parCreate, parCreate.length());
+      String scriptTestLoader = String.format(getPageLoaderScript(), serverUrl, parTest, parTest.length());
+      String scriptPdfLoader = String.format(getPageLoaderScript(), serverUrl, parCreate, parCreate.length());
 
       // Lade Feedback page
       Long testLength = (Long) webExec.executeScript(scriptTestLoader);
